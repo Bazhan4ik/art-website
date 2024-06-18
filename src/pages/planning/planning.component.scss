@@ -1,0 +1,54 @@
+.app {
+    margin-top: 64px;
+
+    .header {
+        width: 100%;
+        margin-left: 16px;
+    }
+
+
+    .content {
+        padding: 0 16px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 32px;
+
+        .element {
+            padding: 6px;
+            border-radius: 6px;
+            background-color: gray;
+            
+            &.one {
+                background-color: rgb(107, 126, 107);
+
+                .image {
+                    img {
+                        height: 300px;
+                        object-fit: cover;
+                    }
+                }
+            }
+            &.two {
+                background-color: rgb(150, 184, 216);
+            }
+            &.three {
+                background-color: rgb(187, 129, 105);
+            }
+            &.four {
+                background-color: rgb(165, 165, 165);
+            }
+
+            .image {
+                img {
+                    border-radius: 6px;
+                    width: 100%;
+                }
+            }
+            .right {
+               padding: 2px; 
+            }
+        }
+    }
+
+
+}

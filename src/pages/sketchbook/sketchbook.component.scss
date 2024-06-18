@@ -1,0 +1,121 @@
+.app {
+    margin-top: 64px;
+
+    .header {
+        width: 100%;
+        margin-left: 16px;
+    }
+
+    .list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        padding: 0 16px;
+
+        .element {
+            border-radius: 12px;
+            display: grid;
+            grid-template-columns: 128px 1fr;
+            padding: 8px;
+            background-color: #e0dcdc;
+            -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            
+            .description {
+                margin-left: 8px;
+
+
+                .right {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                    
+                    .text {
+                        p {
+                            color: rgb(75, 75, 75);
+                            font-size: 15px;
+                            margin: 0px;
+                        }
+                    }
+                    
+                    .buttons {
+                        button {
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+                
+                .header {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    margin-left: 0;
+                    width: 100%;
+                    position: relative;
+                    
+                    p {
+                        font-size: 13px;
+                        margin: 0;
+                    }
+                    
+                    h3 {
+                        color: var(--dark-green);
+                        margin: 0;
+                    }
+                    
+                    .icon {
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        height: 24px;
+                        width: 24px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 100%;
+
+                        img {
+                            height: 20px;
+                            width: 20px;
+                        }
+
+                        &.skull {
+                            background-color: var(--red);
+
+                            img {
+
+                            }
+                        }
+                    }
+
+                }   
+            }
+
+
+            .image {
+                width: 128px;
+                height: 128px;
+                position: relative;
+                
+                img {
+                    width: 128px;
+                    height: 128px;
+                    border-radius: 12px;
+                    object-fit: cover;
+                    rotate: 270deg;
+
+                    &:hover {
+                        width: unset;
+                        height: unset;
+                        height: 352px;
+                        z-index: 999;
+                        position: absolute;
+                        top: -64px;
+                        left: -32px;
+                    }
+                }
+            }
+        }
+    }
+}

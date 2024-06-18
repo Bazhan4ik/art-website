@@ -1,0 +1,35 @@
+<div class="app">
+    <div class="header">
+        <div class="title">
+            <h2 class="font-title">My Sketchbook</h2>
+        </div>
+    </div>
+    <div class="list">
+        @for (item of elements; track $index) {
+            <div class="element">
+                <div class="image">
+                    <img src="./../../assets/sketchbook/sketchbook{{ item.image }}.jpg">
+                </div>
+                <div class="description">
+                    <div class="header">
+                        <p class="font-small">Date: <span>{{ item.date }}</span></p>
+                        <h3 class="font-title">
+                            {{ item.title }}
+                        </h3>
+                        <div class="icon">
+                            <img class="happy" src="./../../assets/icons/{{ item.rating }}.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="text">
+                            <p class="font-text">
+                                {{ item.description }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
