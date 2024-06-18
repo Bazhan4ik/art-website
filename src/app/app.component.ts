@@ -6,6 +6,7 @@ import { StatueComponent } from '@pages/statue/statue.component';
 import { ProjectsComponent } from '@pages/projects/projects.component';
 import { PlanningComponent } from '@pages/planning/planning.component';
 import { ContactComponent } from '@pages/contact/contact.component';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
     selector: 'app-root',
@@ -23,5 +24,13 @@ import { ContactComponent } from '@pages/contact/contact.component';
     ]
 })
 export class AppComponent {
+  constructor(private viewportScroller: ViewportScroller) {};
+
   title = 'art';
+
+
+
+  move(t: string) {
+    this.viewportScroller.scrollToAnchor(t);
+  }
 }

@@ -16,18 +16,23 @@
     </div>
     <div class="nav">
       <div class="link">
-        <a routerLink="" class="font-text">
+        <a (click)="move('about')" class="font-text">
           About
         </a>
       </div>
       <div class="link">
-        <a routerLink="" class="font-text">
+        <a (click)="move('projects')" class="font-text">
+          Projects
+        </a>
+      </div>
+      <div class="link">
+        <a (click)="move('sketchbook')" class="font-text">
           Sketchbook
         </a>
       </div>
       <div class="link">
-        <a routerLink="" class="font-text">
-          Projects
+        <a (click)="move('planning')" class="font-text">
+          Planning
         </a>
       </div>
     </div>
